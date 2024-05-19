@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Animation</title>
+    <style>
+        html,body{
+            height:100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .fighter{
+            height: 709px;
+            width: 589px;
+            background: url("spritesheet.png");
+            position: absolute;
+            top:50%;
+            /* left:50%; */
+            transform: translate(-50%,-50%);
+            animation: fighter 1s steps(10) infinite, movefighter 3s linear infinite;
+        }
+        @keyframes fighter {
+            from{
+                background-position: 0;
+            }
+            to{
+                background-position: 5890px;
+            }
+        }
+        @keyframes movefighter {
+            0%{
+                left:0;
+            }
+            100%{
+                left:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fighter"></div>
+</body>
+</html>
